@@ -1,0 +1,12 @@
+name: Hello-Poussin
+
+on: [push]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: récupérer le code 
+        uses: checkout/checkout@v3
+      - name: afficher hello world
+        run: echo Hello World
