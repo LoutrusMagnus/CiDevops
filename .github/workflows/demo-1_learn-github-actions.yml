@@ -11,21 +11,21 @@ jobs:
   #Premier job
   check-bats-version:
   #Définit le runner qui va éxécuter le workflow
-  runs-on: ubuntu-latest
-  #Liste des étapes (steps)
-  steps:
-  # Attribut "name" qui permet de définir le nom de l'étape
-    - name: Récupérer le code
-    #Contenu de l'étape
-      uses: actions/checkout@v3
-    #Nouvelle étape
-    - name: Installer Node 14
-    #Contenu
-      uses: actions/setup-node@v3
-    # Variable pour préciser la version de node
-      with:
-          node-version: '14'
-    - name : Installer bats
-      run : npm install -g bats
-    - name: Retourner la version de bats
-    - run: bats -v
+    runs-on: ubuntu-latest
+    #Liste des étapes (steps)
+    steps:
+    # Attribut "name" qui permet de définir le nom de l'étape
+      - name: Récupérer le code
+      #Contenu de l'étape
+        uses: actions/checkout@v3
+      #Nouvelle étape
+      - name: Installer Node 14
+      #Contenu
+        uses: actions/setup-node@v3
+      # Variable pour préciser la version de node
+        with:
+            node-version: '14'
+      - name : Installer bats
+        run : npm install -g bats
+      - name: Retourner la version de bats
+      - run: bats -v
