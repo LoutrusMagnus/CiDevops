@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: récupérer le code 
-        uses: checkout/checkout@v3
+        uses: action/checkout@v3
       - name: afficher hello world
         run: echo Hello World
