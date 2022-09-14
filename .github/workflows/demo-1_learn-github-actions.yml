@@ -28,4 +28,4 @@ jobs:
       - name : Installer bats
         run : npm install -g bats
       - name: Retourner la version de bats
-      - run: bats -v
+        run: bats -v
